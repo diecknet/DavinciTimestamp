@@ -5,12 +5,26 @@ Converts an Edit Decision List (EDL) string to timestamps and titles.
 .DESCRIPTION
 This cmdlet reads an EDL string specified by the user and extracts timestamps and titles from it.
 
+If the provided EDL data only contains Timestamps that start with "01:", it's assumed that the user made an error.
+In that case all resulting Timestamps will start with "00:" instead. That behavior can be changed, if providing
+the -IgnoreOnly01Timestamps switch parameter.
+
 .PARAMETER Value
 The EDL string data that should be processed. This parameter is mandatory.
 
+.PARAMETER IgnoreOnly01Timestamps
+Ignores that all Timestamps might start with '01:' and does not try to fix it by using '00:' instead.
+
 .EXAMPLE
 ConvertFrom-EDL -Value $MyEDLData
+
 Reads the provided EDL String data and outputs the extracted timestamps and titles.
+
+.EXAMPLE
+ConvertFrom-EDL -Value $MyEDLData -IgnoreOnly01Timestamps
+
+Reads the provided EDL String data and outputs the extracted timestamps and titles.
+Ignores that all Timestamps in the EDL data start with '01:'.
 
 .INPUTS
 None. You cannot pipe objects to Convert-EDL2Timestamp.ps1.
@@ -32,7 +46,8 @@ function ConvertFrom-EDL {
     param(  [Parameter(Mandatory=$true)]
             [AllowEmptyString()]
             [String[]]
-            $Value
+            $Value,
+            [switch]$IgnoreOnly01Timestamps
     )
 
     # If EDL was provided as one multi-line string instead of an array

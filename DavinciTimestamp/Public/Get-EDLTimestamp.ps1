@@ -32,7 +32,13 @@ function Get-EDLTimestamp {
     [CmdletBinding()]
     param(  [Parameter(Mandatory=$false)]
             [System.IO.FileInfo]
-            $Path)
+            $Path,
+            [switch]$IgnoreOnly01Timestamps)
+
+    $OptionalParametersPassThrough = @{}
+    if($PSBoundParameters.ContainsKey("IgnoreOnly01Timestamps")) {
+        $OptionalParametersPassThrough["IgnoreOnly01Timestamps"] = $IgnoreOnly01Timestamps
+    }
 
     if([string]::IsNullOrEmpty($Path)) {
         Write-Verbose "No 'Path' specified by user, trying to find EDL file automatically instead..."
@@ -49,7 +55,7 @@ function Get-EDLTimestamp {
         Write-Verbose "Reading content of EDL file: $Path"
         $EDLFileContent = Get-Content -Path $Path -ErrorAction Stop
         Write-Verbose "Calling ConvertFrom-EDL"
-        ConvertFrom-EDL -Value $EDLFileContent
+        ConvertFrom-EDL -Value $EDLFileContent @OptionalParametersPassThrough
 
     } else {
         throw "File does not exist ($Path)."
