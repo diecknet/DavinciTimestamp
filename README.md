@@ -10,13 +10,17 @@ to usable Timestamps.
 
 ## Installation
 
+This should work with Windows PowerShell 5.1 and PowerShell 7.x on Linux, macOS or Windows.
+
 ```powershell
+# Windows PowerShell
 Install-Module DavinciTimestamp
 ```
 
 or
 
 ```powershell
+# PowerShell 7.x
 Install-PSResource DavinciTimestamp
 ```
 
