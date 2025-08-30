@@ -10,7 +10,9 @@ to usable Timestamps.
 
 ## Installation
 
-This should work with Windows PowerShell 5.1 and PowerShell 7.x on Linux, macOS or Windows.
+The module is available via the [PowerShell Gallery](https://www.powershellgallery.com/packages/DavinciTimestamp).
+
+It should work with Windows PowerShell 5.1 and PowerShell 7.x on Linux, macOS or Windows.
 
 ```powershell
 # Windows PowerShell
