@@ -7,6 +7,7 @@ This cmdlet reads an EDL file specified by the user and extracts timestamps and 
 If no path an EDL file was specified, the cmdlet will try to find a .edl file itself.
 
 Under the hood Get-EDLTimestamp reads the EDL file and then calls ConvertFrom-EDL.
+There is also the "gts" alias for Get-EDLTimestamp.
 
 .PARAMETER Path
 The EDL file that should be processed. This parameter is optional. If no Path is specified, the cmdlet tries to find a EDL file.
@@ -43,6 +44,7 @@ https://github.com/diecknet/DavinciTimestamp
 #>
 
 function Get-EDLTimestamp {
+    [Alias("gts")]
     [CmdletBinding()]
     param(  [Parameter(Mandatory=$false)]
             [System.IO.FileInfo]
