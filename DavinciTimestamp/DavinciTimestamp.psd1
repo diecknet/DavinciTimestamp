@@ -24,7 +24,7 @@ GUID = '6a61ad53-68b4-4937-a299-cc24ce2ab353'
 Author = 'Andreas Dieckmann'
 
 # Company or vendor of this module
-CompanyName = 'Unknown'
+CompanyName = 'diecknet'
 
 # Copyright statement for this module
 Copyright = '(c) Andreas Dieckmann. All rights reserved.'
@@ -33,7 +33,7 @@ Copyright = '(c) Andreas Dieckmann. All rights reserved.'
 Description = 'Converts Davinci Resolve EDL files to Timestamps e.g. for YouTube '
 
 # Minimum version of the PowerShell engine required by this module
-# PowerShellVersion = ''
+PowerShellVersion = '5.1'
 
 # Name of the PowerShell host required by this module
 # PowerShellHostName = ''
