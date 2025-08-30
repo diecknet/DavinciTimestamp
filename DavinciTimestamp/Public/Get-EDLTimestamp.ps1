@@ -4,13 +4,27 @@ Gets Timestamp and Title Data from an Edit Decision List (EDL) file.
 
 .DESCRIPTION
 This cmdlet reads an EDL file specified by the user and extracts timestamps and titles from it.
+If no path an EDL file was specified, the cmdlet will try to find a .edl file itself.
+
+Under the hood Get-EDLTimestamp reads the EDL file and then calls ConvertFrom-EDL.
 
 .PARAMETER Path
 The EDL file that should be processed. This parameter is optional. If no Path is specified, the cmdlet tries to find a EDL file.
 
+.PARAMETER IgnoreOnly01Timestamps
+Ignores that all Timestamps might start with '01:' and does not try to fix it by using '00:' instead.
+
 .EXAMPLE
 Get-EDLTimestamp -Path "C:\Video\MyVideo.edl"
+
 Reads the provided EDL file and outputs the extracted timestamps and titles.
+
+.EXAMPLE
+Get-EDLTimestamp
+
+Since no EDL file was provided, the cmdlet tries to automatically find an .edl file itself.
+It looks in the following locations (in this order) $PWD.Path, $HOME, C:\temp, /tmp
+It will only use the first file found.
 
 .INPUTS
 None. You cannot pipe objects to Get-EDLTimestamp.

@@ -30,7 +30,7 @@ CompanyName = 'diecknet'
 Copyright = '(c) Andreas Dieckmann. All rights reserved.'
 
 # Description of the functionality provided by this module
-Description = 'Converts Davinci Resolve EDL files to Timestamps e.g. for YouTube '
+Description = 'Converts Davinci Resolve EDL files to Timestamps e.g. for YouTube'
 
 # Minimum version of the PowerShell engine required by this module
 PowerShellVersion = '5.1'

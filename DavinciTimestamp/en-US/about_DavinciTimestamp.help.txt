@@ -2,15 +2,18 @@ TOPIC
     DavinciTimestamp
 
 SHORT DESCRIPTION
-    You should considering providing an introduction and overview of your
-    module here.
+    Converts Davinci Resolve EDL files to Timestamps e.g. for YouTube.
 
 LONG DESCRIPTION
-    Discuss what the "primary" commands are in your module especially if
-    there are many commands.  Discuss how to get started using this module
-    providing examples where appropriate.
+    You can add markers in your Davinci Resolve Timeline - but there is no native way to export these
+    in a YouTube-compatible format. This PowerShell module helps by converting .edl files from Davinci Resolve
+    to usable Timestamps.
 
-YOUR HEADER HERE
-    About topics in PowerShell are free-form text.  Add headers to your
-    about topic as necessary.
+HOW TO USE
+    In Davinci Resolve on the "Edit" page: Right-click on your Timeline in the Media Pool.
+    Click on Timelines -> Export -> AAF/XML/EDL/DRT/OTIO (or similar) and save the file somewhere.
+    Then in PowerShell run Get-EDLTimestamp -Path <PathToYourFile>.
+
+    For example, if your .edl file was exported to C:\temp\MyTimeline.edl, run this:
+    Get-EDLTimestamp -Path C:\temp\MyTimeline.edl
 
