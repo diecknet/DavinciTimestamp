@@ -1,3 +1,4 @@
+name: Publish to PowerShell Gallery
 on:
   push:
     branches:
