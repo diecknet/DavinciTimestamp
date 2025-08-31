@@ -25,5 +25,6 @@ jobs:
           python-version: 3.x
       - name: Deploy MkDocs
         run: |
+          cp ../README.md ./index.md
           pip install mkdocs
           mkdocs gh-deploy --force --config-file ../mkdocs.yml
