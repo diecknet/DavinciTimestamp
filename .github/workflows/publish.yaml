@@ -26,7 +26,7 @@ jobs:
           $bumped = $GithubVersion -ge $GalleryVersion
 
           # Set the output named "version_bumped"
-          Write-Host "::set-output name=version_bumped::$bumped"
+          Write-Output "version_bumped=$bumped" >> $ENV:GITHUB_OUTPUT
 
       - name: Publish to PSGallery
         shell: pwsh
