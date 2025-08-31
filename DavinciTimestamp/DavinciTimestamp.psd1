@@ -95,7 +95,7 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        Tags = @("Video editing", "EDL")
+        Tags = @("video-editing", "edl")
 
         # A URL to the license for this module.
         LicenseUri = 'https://github.com/diecknet/DavinciTimestamp/blob/main/LICENSE'
