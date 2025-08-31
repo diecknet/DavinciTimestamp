@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.1] Update metadata
+
+- Just some metadata updates, e.g. so that the PowerShell Gallery entry links to the GitHub repository
+
 ## [0.1.0] Initial
 
-Initial release
+- Initial release
