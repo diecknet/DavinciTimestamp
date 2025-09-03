@@ -26,7 +26,9 @@ or
 Install-PSResource DavinciTimestamp
 ```
 
-## Examples
+## How to use
+
+### Text instructions
 
 In Davinci Resolve on the "Edit" page: Right-click on your **active** Timeline in the Media Pool.
 Click on `Timelines` -> `Export` -> `Timeline Markers to EDL` and save the file somewhere.
@@ -47,7 +49,20 @@ Get-EDLTimestamp -Path C:\temp\MyTimeline.edl
 > [!TIP]
 > `Get-EDLTimestamp` will try to automatically find a `.edl` file if you don't specify one. The cmdlet looks in your `$HOME` directory and `/tmp` (Linux/macOS) or `C:\temp` (Windows). It will just take the first `.edl` file it finds though.
 
+### Video instructions
+
+There are also Video instructions available on YouTube.
+
+#### German video
+
+[<img width="343" height="196" alt="Thumbnail of German Video on YouTube" src="https://github.com/user-attachments/assets/b66508d5-8640-40fd-ad67-414841486c93" />](https://youtu.be/8OUIM2XfXI8)
+
+#### English video
+
+[<img width="343" height="196" alt="Thumbnail of English Video on YouTube" src="https://github.com/user-attachments/assets/1231a0ef-b47f-4e36-b17c-766a47d43ce5" />](https://youtu.be/4RdHXWIUxwY)
+
 ## Open Source!
 
 If you find any bugs or have feature requests, please open a [ISSUE](https://github.com/diecknet/DavinciTimestamp/issues) here in the GitHub repository. But I can't promise that I will do anything :P Issues and Pull Requests are welcome, but I deem this module as pretty much feature complete.
+
 
