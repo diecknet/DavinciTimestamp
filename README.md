@@ -30,6 +30,8 @@ Install-PSResource DavinciTimestamp
 
 ### Text instructions
 
+#### Step 1: Export EDL from Davinci
+
 In Davinci Resolve on the "Edit" page: Right-click on your **active** Timeline in the Media Pool.
 Click on `Timelines` -> `Export` -> `Timeline Markers to EDL` and save the file somewhere.
 
@@ -37,6 +39,8 @@ Click on `Timelines` -> `Export` -> `Timeline Markers to EDL` and save the file 
 > Do not use the Export option `AAF / XML / EDL / DRT / OTIO...`. Even though you can create `.edl` files with that option too, they're a bit different and are not supported with this module.
 
 <img width="953" height="470" alt="image" src="https://github.com/user-attachments/assets/97813bfa-7236-45f8-8812-a853f03d9ffc" />
+
+#### Step 2: Convert via PowerShell 
 
 Then in PowerShell run `Get-EDLTimestamp -Path <PathToYourFile>`.
 
@@ -48,6 +52,15 @@ Get-EDLTimestamp -Path C:\temp\MyTimeline.edl
 
 > [!TIP]
 > `Get-EDLTimestamp` will try to automatically find a `.edl` file if you don't specify one. The cmdlet looks in your `$HOME` directory and `/tmp` (Linux/macOS) or `C:\temp` (Windows). It will just take the first `.edl` file it finds though.
+
+#### Step 3: Use the timestamps
+
+If you want to use them on YouTube, just paste the result of **Step 2** into the description of your video on YouTube.
+
+#### Pro tip
+
+> [!TIP]
+> I often just run this: `gts | Set-Clipboard` (works because my .edl file is in one of the standard folders)
 
 ### Video instructions
 
@@ -64,5 +77,6 @@ There are also Video instructions available on YouTube.
 ## Open Source!
 
 If you find any bugs or have feature requests, please open a [ISSUE](https://github.com/diecknet/DavinciTimestamp/issues) here in the GitHub repository. But I can't promise that I will do anything :P Issues and Pull Requests are welcome, but I deem this module as pretty much feature complete.
+
 
 
