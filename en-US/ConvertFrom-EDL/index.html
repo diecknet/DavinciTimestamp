@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://diecknet.github.io/DavinciTimestamp/en-US/ConvertFrom-EDL/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>ConvertFrom-EDL - DavinciTimestamp Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ConvertFrom-EDL";
+        var mkdocs_page_input_path = "en-US/ConvertFrom-EDL.md";
+        var mkdocs_page_url = "/DavinciTimestamp/en-US/ConvertFrom-EDL/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> DavinciTimestamp Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">DavinciTimestamp</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">en US</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">ConvertFrom-EDL</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#synopsis">SYNOPSIS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">SYNTAX</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#description">DESCRIPTION</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">EXAMPLES</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-1">EXAMPLE 1</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parameters">PARAMETERS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#-value">-Value</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-ignoreonly01timestamps">-IgnoreOnly01Timestamps</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#-progressaction">-ProgressAction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#commonparameters">CommonParameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inputs">INPUTS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#none-you-cannot-pipe-objects-to-convert-edl2timestampps1">None. You cannot pipe objects to Convert-EDL2Timestamp.ps1.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#outputs">OUTPUTS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#string-outputs-strings-that-combine-a-timestamp-and-a-title-separated-by-a-space">String. Outputs strings that combine a timestamp and a title, separated by a space.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notes">NOTES</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#related-links">RELATED LINKS</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Get-EDLTimestamp/">Get-EDLTimestamp</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">DavinciTimestamp Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">en US</li>
+      <li class="breadcrumb-item active">ConvertFrom-EDL</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/diecknet/DavinciTimestamp/edit/master/docs/en-US/ConvertFrom-EDL.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="convertfrom-edl">ConvertFrom-EDL</h1>
+<h2 id="synopsis">SYNOPSIS</h2>
+<p>Converts an Edit Decision List (EDL) string to timestamps and titles.</p>
+<h2 id="syntax">SYNTAX</h2>
+<pre><code>ConvertFrom-EDL [-Value] &lt;String[]&gt; [-IgnoreOnly01Timestamps] [-ProgressAction &lt;ActionPreference&gt;]
+ [&lt;CommonParameters&gt;]
+</code></pre>
+<h2 id="description">DESCRIPTION</h2>
+<p>This cmdlet reads an EDL string specified by the user and extracts timestamps and titles from it.</p>
+<h2 id="examples">EXAMPLES</h2>
+<h3 id="example-1">EXAMPLE 1</h3>
+<pre><code>ConvertFrom-EDL -Value $MyEDLData
+Reads the provided EDL String data and outputs the extracted timestamps and titles.
+</code></pre>
+<h2 id="parameters">PARAMETERS</h2>
+<h3 id="-value">-Value</h3>
+<p>The EDL string data that should be processed.
+This parameter is mandatory.</p>
+<pre><code class="language-yaml">Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-ignoreonly01timestamps">-IgnoreOnly01Timestamps</h3>
+<p>Ignores that all Timestamps might start with '01:' and does not try to fix it by using '00:' instead.</p>
+<pre><code class="language-yaml">Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-progressaction">-ProgressAction</h3>
+<p>{{ Fill ProgressAction Description }}</p>
+<pre><code class="language-yaml">Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="commonparameters">CommonParameters</h3>
+<p>This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see <a href="http://go.microsoft.com/fwlink/?LinkID=113216">about_CommonParameters</a>.</p>
+<h2 id="inputs">INPUTS</h2>
+<h3 id="none-you-cannot-pipe-objects-to-convert-edl2timestampps1">None. You cannot pipe objects to Convert-EDL2Timestamp.ps1.</h3>
+<h2 id="outputs">OUTPUTS</h2>
+<h3 id="string-outputs-strings-that-combine-a-timestamp-and-a-title-separated-by-a-space">String. Outputs strings that combine a timestamp and a title, separated by a space.</h3>
+<h2 id="notes">NOTES</h2>
+<p>Version:        1.0
+Author:         Andreas Dieckmann
+Creation Date:  2025-08-30
+Purpose/Change: Initial development</p>
+<h2 id="related-links">RELATED LINKS</h2>
+<p><a href="https://github.com/diecknet/DavinciTimestamp">https://github.com/diecknet/DavinciTimestamp</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="DavinciTimestamp"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Get-EDLTimestamp/" class="btn btn-neutral float-right" title="Get-EDLTimestamp">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/diecknet/DavinciTimestamp" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Get-EDLTimestamp/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
