@@ -28,6 +28,8 @@ Install-PSResource DavinciTimestamp
 
 ## How to use
 
+<img width="823" height="314" alt="Screenshot that shows how Get-EDLTimestamp ran in PowerShell 7" src="https://github.com/user-attachments/assets/1e911287-484d-4367-97c0-9a2d428c6084" />
+
 ### Text instructions
 
 #### Step 1: Export EDL from Davinci
@@ -38,7 +40,7 @@ Click on `Timelines` -> `Export` -> `Timeline Markers to EDL` and save the file 
 > [!WARNING]
 > Do not use the Export option `AAF / XML / EDL / DRT / OTIO...`. Even though you can create `.edl` files with that option too, they're a bit different and are not supported with this module.
 
-<img width="953" height="470" alt="image" src="https://github.com/user-attachments/assets/97813bfa-7236-45f8-8812-a853f03d9ffc" />
+<img width="953" height="470" alt="Screenshow that shows how to export EDL timestamp file in Davinci Resolve Studio" src="https://github.com/user-attachments/assets/97813bfa-7236-45f8-8812-a853f03d9ffc" />
 
 #### Step 2: Convert via PowerShell 
 
@@ -77,6 +79,7 @@ There are also Video instructions available on YouTube.
 ## Open Source!
 
 If you find any bugs or have feature requests, please open a [ISSUE](https://github.com/diecknet/DavinciTimestamp/issues) here in the GitHub repository. But I can't promise that I will do anything :P Issues and Pull Requests are welcome, but I deem this module as pretty much feature complete.
+
 
 
 
